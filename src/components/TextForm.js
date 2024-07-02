@@ -33,7 +33,7 @@ export default function TextForm(props) {
     <>
       <div
         className="container"
-        style={{ color: props.mode === "dark" ? "white" : "black" }}
+        style={{ color: props.mode === "dark" ? "black" : "white" }}
       >
         <div className="mb-3">
           <h1>{props.heading}</h1>
@@ -49,28 +49,36 @@ export default function TextForm(props) {
             }}
           ></textarea>
         </div>
-        <button className="btn btn-success mx-2" onClick={handleUpClick}>
+        <button className="btn btn-success mx-2 my-1" onClick={handleUpClick}>
           {props.buttonText}
         </button>
-        <button className="btn btn-success mx-2" onClick={handleLoClick}>
+        <button className="btn btn-success mx-2 my-1" onClick={handleLoClick}>
           {props.button2Text}
         </button>
-        <button className="btn btn-success mx-2" onClick={handleClearClick}>
+        <button
+          className="btn btn-success mx-2 my-1"
+          onClick={handleClearClick}
+        >
           {props.button3Text}
         </button>
-        <button className="btn btn-success mx-2" onClick={handleCopy}>
+        <button className="btn btn-success mx-2 my-1" onClick={handleCopy}>
           {props.button4Text}
         </button>
       </div>
       <div
         className="container"
         style={{
-          color: props.mode === "dark" ? "white" : "black",
+          color: props.mode === "dark" ? "black" : "white",
         }}
       >
         <h1>Your text summary</h1>
         <p>
-          {text.split(" ").length} words and {text.length} characters
+          {
+            text.split(" ").filter((element) => {
+              return element.length !== 0;
+            }).length
+          }{" "}
+          words and {text.length} characters
         </p>
         <p>{0.008 * text.split(" ").length} Minutes read</p>
         <h2>Preview</h2>

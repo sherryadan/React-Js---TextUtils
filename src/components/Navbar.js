@@ -70,6 +70,7 @@ export default function Navbar(props) {
             <label
               className="form-check-label"
               htmlFor="flexSwitchCheckDefault1"
+              style={{ color: props.mode === "dark" ? "white" : "black" }}
             >
               Enable Green Theme
             </label>
