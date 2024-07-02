@@ -33,7 +33,7 @@ export default function TextForm(props) {
     <>
       <div
         className="container"
-        style={{ color: props.mode === "dark" ? "black" : "white" }}
+        style={{ color: props.mode === "dark" ? "white" : "black" }}
       >
         <div className="mb-3">
           <h1>{props.heading}</h1>
@@ -67,9 +67,7 @@ export default function TextForm(props) {
       </div>
       <div
         className="container"
-        style={{
-          color: props.mode === "dark" ? "black" : "white",
-        }}
+        style={{ color: props.mode === "dark" ? "white" : "black" }}
       >
         <h1>Your text summary</h1>
         <p>

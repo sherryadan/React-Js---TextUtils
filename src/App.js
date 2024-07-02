@@ -73,6 +73,10 @@ function App() {
                   button2Text="Convert to Lowercase"
                   button3Text="Clear All"
                   button4Text="Copy All"
+                  mode={mode}
+                  toggleMode={toggleMode}
+                  gmode={gmode}
+                  toggleGmode={toggleGmode}
                 />
               }
             />
