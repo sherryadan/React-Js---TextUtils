@@ -75,7 +75,6 @@ export default function Navbar(props) {
               Enable Green Theme
             </label>
           </div>
-
           <div
             className={
               "form-check form-switch mx-3 text-" +
